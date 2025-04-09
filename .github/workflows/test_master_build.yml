@@ -19,5 +19,9 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
-      - name: Download dependencies, build project, run tests
-        run: mvn verify
+      - name: Removes any previously compiled files and artifacts
+        run: mvn clean
+      - name: Run unit tests
+        run: mvn test
+      - name: Package code
+        run: mvn package
