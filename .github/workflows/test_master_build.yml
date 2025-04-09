@@ -19,7 +19,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
-      - name: Removes any previously compiled files and artifacts
+      - name: Removes any previously compiled files and artifacts, install required dependencies
         run: mvn clean
       - name: Run unit tests
         run: mvn test
